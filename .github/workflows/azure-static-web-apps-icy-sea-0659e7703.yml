@@ -24,7 +24,7 @@ jobs:
           hugo-version: "latest"
           extended: true
       - name: buildHugo
-        run: cd exampleSite && hugo --gc --themesDir ../..
+        run: cd exampleSite && rm -rf public && hugo --gc --themesDir ../..
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
